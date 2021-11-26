@@ -39,8 +39,6 @@ function aloitaTimer(){
     
     if(seconds === "00"){
         clearInterval(timeId)
-        timerEl.innerHTML = ("00:00")
-        
-    
-}
+        timerEl.innerHTML = ("00:00") 
+    }
 }
