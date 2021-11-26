@@ -5,20 +5,16 @@ let timerEl = document.getElementById("timer-count")
 let count = 0
 let hScore = 10
 let aikaCount = 60;
-let time = aikaCount * 60;
+let time = aikaCount;// * 60;
 
 function clicker(){
-    countEl.textContent = count += 1
-    for(let i = 0; i < count.length; i++){
-    if(aikaCount === 0){
-        let countStr = count
-        saveEl.textContent = "You won, your score: " + countStr
-        count++
-        aloitaTimer()
-        clearInterval()
-    }        
+    if(aikaCount <= 0){
+        saveEl.textContent = "Your score: " + count
+        return;
+    }       
+    countEl.textContent = ++count
     }
-    }
+    
 
 function reload(){
     window.location.reload()
@@ -29,7 +25,7 @@ let timeId = setInterval(aloitaTimer, 200)
 function aloitaTimer(){
     console.log(--aikaCount)
     
-    let seconds = time % 60;
+    let seconds = aikaCount % 60;
 
     seconds = seconds < 10 ? '0' + seconds : seconds;
     
@@ -37,10 +33,8 @@ function aloitaTimer(){
     time--;
     //timerEl.innerHTML = aikaCount;
     
-    if(seconds === 0){
+    if(seconds === "00"){
         clearInterval(timeId)
-        timerEl.innerHTML = ("00:00")
-        
-    
-}
+        timerEl.innerHTML = ("00:00") 
+    }
 }

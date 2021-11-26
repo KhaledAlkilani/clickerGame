@@ -1,10 +1,10 @@
 body {
-  text-align: center;
   font-family: sans-serif;
   font-size: 20px;
   background-color: black;
   color: white;
   overflow: hidden;
+  margin-top: 75px;
 }
 
 #image {
@@ -13,6 +13,7 @@ body {
   animation: jump 2s linear infinite;
   cursor: pointer;
   background: linear-gradient(1);
+  margin-left: 0%;
 }
 
 @keyframes jump {
@@ -38,7 +39,7 @@ body {
   padding-bottom: 5px;
   width: 100px;
   margin-bottom: -10px;
-  margin-left: 46.8%;
+  margin-left: 0%;
   border-radius: 5px;
   font-size: 15px;
   font-weight: bold;
