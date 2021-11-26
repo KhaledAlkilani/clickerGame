@@ -3,7 +3,6 @@ let saveEl = document.getElementById("save-el")
 let timerEl = document.getElementById("timer-count")
 
 let count = 0
-let hScore = 10
 let aikaCount = 60;
 let time = aikaCount;// * 60;
 
