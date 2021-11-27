@@ -4,7 +4,7 @@ let timerEl = document.getElementById("timer-count")
 
 let count = 0
 let aikaCount = 60;
-let time = aikaCount;// * 60;
+let time = aikaCount;
 
 function clicker(){
     if(aikaCount <= 0){
@@ -30,7 +30,6 @@ function aloitaTimer(){
     
     timerEl.innerHTML =  "00" + ":" +  seconds;
     time--;
-    //timerEl.innerHTML = aikaCount;
     
     if(seconds === "00"){
         clearInterval(timeId)
